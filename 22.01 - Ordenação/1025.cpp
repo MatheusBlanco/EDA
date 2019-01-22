@@ -5,24 +5,55 @@
 using namespace std;
 using vec = vector<int>;
 
-int main(){
-    int marble, consult, cases = 1;
-    vec marbles;
-    vec aux;
+int buscaBinaria(vec &v, int x){
+    int ini, meio, fim;
+    ini = 0;
+    fim = v.size()-1;
 
-    while(marble != 0 && consult != 0){
-        cout << "CASE# " << cases++ << ":" << endl;
-        cin >> marble >> consult;
-        marbles.push_back (marble);
-        marbles = aux;
-        sort (aux.begin(), aux.end());
-
-        for(int i = 0; i < aux.size(); i++){
-            if(consult ==  aux[i]){
-                
-            }
-        }
+    while(ini<=fim){
+        meio = (ini+fim)/2;
+        if(v[meio] == x)
+            break;
+        else if(v[meio]>x)
+            fim = meio - 1;
+        else
+            ini = meio + 1;
     }
 
-    return 0;
+    if(v[meio] == x){
+        int p = meio;
+        while(p-1 >= 0 and v[p-1] == x)
+            p--;
+        return p;
+    }
+
+    return -1;
+}
+
+int main(){
+    int number, Query, x, t = 1;
+
+    while((cin >> number >> Query) and number+Query > 0){
+        cout << "CASE# " << t++ << ":" << endl;
+
+        vec v;
+        while(number--){
+            cin >> x;
+            if(x){
+                v.push_back(x);
+            }
+        }
+
+        sort(v.begin(), v.end());
+
+        while(Query--){
+            cin >> x;
+            int pos = buscaBinaria(v,x);
+
+        if(pos >= 0)
+                    cout << x << " found at " << pos+1 << endl;
+                else
+                    cout << x << " not found" << endl;
+        }
+    }
 }
