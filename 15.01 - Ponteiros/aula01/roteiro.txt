@@ -1,0 +1,49 @@
+Segmento de Texto
+└── segments
+    ├── text_segment0.c
+    └── text_segment1.c
+
+Escopo de Variáveis
+└── scope
+    ├── global.c
+    └── local.c
+
+Segmento de Dados Inicializados
+└── segments
+    ├── data_segment0.c
+    └── data_segment1.c
+
+Segmento bss
+└── segments
+    ├── bss_segment0.c
+    └── bss_segment1.c
+
+0x32AFFB558F == &casa_da_joana
+└── memory
+    └── endereco.c
+
+Operadores * e &
+└── memory
+    └── ponteiro.c
+
+malloc
+└── dynamic_allocation
+    └── malloc.c
+
+Arrays sao ponteiros
+└── dynamic_allocation
+    └── arrays_ponteiros.c
+
+Outras funcoes
+└── dynamic_allocation
+    └── calloc_realloc_free.c
+
+Passagem por Referencia x Valor
+└── reference_x_value
+     ├── pass_by_reference.c
+     ├── pass_by_value.c
+     └── reference_vs_value.c
+
+Acesso: strucs unions
+└── structs_unions
+     └── structs_unions.c
