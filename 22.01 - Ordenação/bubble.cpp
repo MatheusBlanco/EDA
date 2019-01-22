@@ -4,29 +4,29 @@
 using namespace std;
 
 template<typename T>
-void bubble_sort(vector<T>& as) {
-    int N = as.size();
+void bubble_sort(vector<T>& v) {
+    int N = v.size();
     bool updated;
 
     do {
         updated = false;
 
         for (int i = 1; i < N; ++i) {
-            if (as[i - 1] > as[i]) {
+            if (v[i - 1] > v[i]) {
                 updated = true;
-                swap(as[i - 1], as[i]);
+                swap(v[i - 1], v[i]);
             }
         }
     } while (updated);
 }
 
 int main(){
-    vector<int> as {3,5,1,2,4};
+    vector<int> v {3,5,1,2,4};
 
-    bubble_sort<int>(as);
+    bubble_sort<int>(v);
 
-    for(size_t i = 0; i < as.size(); ++i){
-        cout << as[i] << (i + 1 == as.size() ? '\n' : ' ');
+    for(size_t i = 0; i < v.size(); ++i){
+        cout << v[i] << (i + 1 == v.size() ? '\n' : ' ');
     }
 
     return 0;
