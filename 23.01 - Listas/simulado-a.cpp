@@ -7,21 +7,20 @@ using namespace std;
 
 int main(){
     int a, b, c, d;
-    vector<int> ab;
-    vector<int> cd;
 
-    //while(scanf(""))
-    cin >> a >> b >> c >> d;
+    while(1){
+        cin >> a >> b >> c >> d;
 
-    ab.push_back(a);
-    ab.push_back(b);
-    cd.push_back(c);
-    cd.push_back(d);
+        if(a == 0 && b ==0 && c ==0 && d == 0) return 0;
 
-    if((ab.begin() > cd.end()) || (ab.end() > cd.begin())){
-        cout << "Precisamos de novas linhas!\n" << endl;
-    } else{
-        cout << "Linhas autorizadas\n" << endl;
+        if(a < d && a < c){
+            cout << "Precisamos de novas linhas!\n" << endl;
+        } else if(a < c && b > c){
+            cout << "Precisamos de novas linhas!\n" << endl;
+        } else{
+            cout << "Linhas autorizadas\n" << endl;
+        }
+
     }
 
     return 0;
