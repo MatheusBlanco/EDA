@@ -247,7 +247,7 @@ void circular_llist::display_list()
 }
 
 /*
- * Update Circular Link List 
+ * Update Circular Link List
  */
 void circular_llist::update()
 {
@@ -273,18 +273,18 @@ void circular_llist::update()
         }
         s = s->next;
     }
-    s->info = value;  
+    s->info = value;
     cout<<"Node Updated"<<endl;
-} 
- 
+}
+
 /*
- * Sort Circular Link List 
+ * Sort Circular Link List
  */
 void circular_llist::sort()
 {
     struct node *s, *ptr;
     int temp;
-    if (last == NULL) 
+    if (last == NULL)
     {
         cout<<"List is empty, nothing to sort"<<endl;
         return;
@@ -308,8 +308,8 @@ void circular_llist::sort()
             {
                 break;
             }
-            ptr = ptr->next;    
+            ptr = ptr->next;
         }
-        s = s->next;         
+        s = s->next;
     }
 }
