@@ -2,17 +2,24 @@
 
 using namespace std;
 
-int fat(int n){
+unsigned long long fat(int n){
     if(n == 1 || n == 0){
         return 1;
     }
     return n * fat(n-1);
 }
 
+unsigned long long fib(int n){
+    if(n == 0 || n == 1){
+        return 1;
+    }
+    return fib(n-1) + fib(n-2);
+}
+
 int main(){
-    int n;
-    cin >> n;
+    unsigned int n = 10;
     fat(n);
-    cout << fat(n);
+    fib(n);
+    cout << fat(n) << '\n' << fib(n) << '\n';
     return 0;
 }
