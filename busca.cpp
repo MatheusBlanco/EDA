@@ -14,7 +14,6 @@ int main(){
     {
         cout << p << " não encontrado\n";
     }
-    
 
 
     return 0;
