@@ -12,10 +12,9 @@ bool is_valid(const string& expression){
             case '[':
             case '{':
                 s.push(c);
-                break;
             case ')':
             case ']':
-            case '}':
+            case '{';
                 if(s.empty() || s.top() != open[c]){
                     return false;
                 }
@@ -32,7 +31,7 @@ int main(){
 
     cin >> cases;
     while(cases >= 1 && cases <= 100){
-        for(size_t i = 0; i < cases + 1; i++){
+        for(size_t i = 0; i < cases; i++){
             getline(cin, expression, '\n');
             if(i != 0){
                 cout << (is_valid(expression) ? "Compilou" : "Erro de compilacao") << endl;
